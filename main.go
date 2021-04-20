@@ -20,27 +20,3 @@ import "github.com/bugg123/gctx/cmd"
 func main() {
 	cmd.Execute()
 }
-
-// type Project struct {
-// 	Name string `json:"name"`
-// }
-
-// func main() {
-// 	cmd := exec.Command("gcloud", "projects", "list", `--format="json"`)
-
-// 	var out bytes.Buffer
-// 	var projects []Project
-// 	cmd.Stdout = &out
-// 	cmd.Run()
-// 	err := json.Unmarshal(out.Bytes(), projects)
-// 	if err != nil {
-// 		log.Printf("Json Error: %v", err)
-// 	}
-// 	var names []string
-// 	log.Println("printing stuff")
-// 	for _, project := range projects {
-// 		log.Println(project.Name)
-// 		names = append(names, project.Name)
-// 	}
-
-// }
