@@ -69,7 +69,8 @@ func init() {
 }
 
 type Project struct {
-	Name string `json:"name"`
+	Name      string `json:"name"`
+	ProjectID string `json:"projectId"`
 }
 
 func getGcloudProjects(toComplete string) []string {
@@ -82,8 +83,8 @@ func getGcloudProjects(toComplete string) []string {
 	json.Unmarshal(out.Bytes(), &projects)
 	var names []string
 	for _, project := range projects {
-		if strings.HasPrefix(project.Name, toComplete) {
-			names = append(names, project.Name)
+		if strings.HasPrefix(project.ProjectID, toComplete) {
+			names = append(names, project.ProjectID)
 		}
 	}
 	return names
