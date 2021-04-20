@@ -31,12 +31,10 @@ import (
 var setProjectCmd = &cobra.Command{
 	Use:   "set-project",
 	Short: "Sets your gcloud project in your config",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
+	Long: `Sets the project being used in your gcloud config.
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+The primary reason for the creation of this project is to 
+allow for the autocompletion of gcloud projects`,
 	Args: func(cmd *cobra.Command, args []string) error {
 		if len(args) != 1 {
 			return errors.New("requires a single project argument")
