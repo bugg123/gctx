@@ -64,5 +64,5 @@ func init() {
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
-	listCmd.Flags().StringVar(&RipGrep, "rg", "", "Pattern to rg for")
+	listCmd.Flags().StringVarP(&RipGrep, "rg", "r", "", "Pattern to rg for")
 }
