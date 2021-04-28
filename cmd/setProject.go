@@ -29,8 +29,9 @@ import (
 
 // setProjectCmd represents the setProject command
 var setProjectCmd = &cobra.Command{
-	Use:   "set-project",
-	Short: "Sets your gcloud project in your config",
+	Use:     "set-project",
+	Aliases: []string{"sp"},
+	Short:   "Sets your gcloud project in your config",
 	Long: `Sets the project being used in your gcloud config.
 
 The primary reason for the creation of this project is to 
